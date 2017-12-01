@@ -14,7 +14,7 @@ namespace LibraryOperations.Tests
             secondClass.Setup(x => x.SecondMethod(It.IsAny<string>()));  //.Returns("textabc"); 
             //without Returns() it returns default value (in this case default(string))
 
-            var firstClass = new MyFirstClass(secondClass.Object);
+            var firstClass = new MyFirstClass(secondClass.Object); ////
             var actual = firstClass.FirstMethod("text");
             var expected = "def"; //textabcdef
             Assert.AreEqual(actual, expected);

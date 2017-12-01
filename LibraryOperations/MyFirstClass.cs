@@ -12,7 +12,7 @@ namespace LibraryOperations
 
         public MyFirstClass(MySecondClass second)
         {
-            this.second = second;
+            this.second = second; 
         }
 
         public string FirstMethod(string text)
