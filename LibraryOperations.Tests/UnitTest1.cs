@@ -23,7 +23,8 @@ namespace LibraryOperations.Tests
 
         private void CalculateMemberShipCostTest(int source,double expected,string message)
         {
-            var manager = new MemberManager();
+            var manager = new MemberManager(); //here we depends on the implementation of MemberManager. Error may occure inside MemberManager,but
+            //not in LibraryCore
             var libraryCore = new LibraryCore(manager);
             var actual = libraryCore.CalculateMemberShipCost(source);
             Assert.AreEqual(actual, expected,message);
