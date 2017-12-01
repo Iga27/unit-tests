@@ -17,7 +17,7 @@ namespace LibraryOperations
 
         public string FirstMethod(string text)
         {
-            second.AnotherMethod(text);
+            second.AnotherMethod(text); //this method used for testing purposes ( secondClass.Verify(x=>x.AnotherMethod(It.IsAny<string>()));)
             return second.SecondMethod(text)+"def";
         }
     }
